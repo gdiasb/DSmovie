@@ -6,10 +6,12 @@ function Navbar() {
     <nav className="navbar navbar-dark bg-primary container-fluid">
       <div className="nav-content">
         <a className="navbar-brand nav-logo" href="#">
-          DSmovie
+          MovieNow
         </a>
-        <a href='#' className="nav-span link-dark">
-          <FiGithub className='nav-git-logo' />
+        <a href='#' className="nav-span">
+          {/* <IconContext.Provider value={{className:'nav-github-logo'}}> */}
+          <FiGithub className='nav-github-logo'/>
+          {/* </IconContext.Provider> */}
           @gdiasb
         </a>
       </div>
