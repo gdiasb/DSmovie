@@ -1,8 +1,11 @@
 // Custom Colors 
 @import './globalStyles/colors.scss';
 
+// Custom Fonts
+@import './globalStyles/fonts.scss';
 
+// Bootstrap CSS
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
 
-
-  // Bootstrap CSS
-  @import '../node_modules/bootstrap/scss/bootstrap.scss';
+// Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,700&display=swap');
