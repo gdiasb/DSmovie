@@ -1,5 +1,7 @@
+import Pagination from "../../components/Pagination";
+
 function List() {
-  return (<div>oi</div>)
+  return (<Pagination/>)
 }
 
 export default List
