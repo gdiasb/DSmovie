@@ -1,10 +1,10 @@
-package com.gdias.dsmovie;
+package com.gdias.MovieHate;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DsmovieApplicationTests {
+class MovieHateApplicationTests {
 
 	@Test
 	void contextLoads() {
