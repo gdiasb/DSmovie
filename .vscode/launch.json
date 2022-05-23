@@ -10,6 +10,17 @@
       "projectName": "dsmovie",
       "args": "",
       "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-MovieHateApplication<dsmovie>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "mainClass": "com.gdias.MovieHate.MovieHateApplication",
+      "projectName": "dsmovie",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
     }
   ]
 }
