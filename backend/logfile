@@ -1,0 +1,26 @@
+2022-05-31 14:03:09.940 -03 [7233] LOG:  starting PostgreSQL 14.3 on x86_64-pc-linux-gnu, compiled by gcc (Debian 6.3.0-18+deb9u1) 6.3.0 20170516, 64-bit
+2022-05-31 14:03:09.942 -03 [7233] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-05-31 14:03:09.955 -03 [7233] FATAL:  lock file "/tmp/.s.PGSQL.5432.lock" already exists
+2022-05-31 14:03:09.955 -03 [7233] HINT:  Is another postmaster (PID 4600) using socket file "/tmp/.s.PGSQL.5432"?
+2022-05-31 14:03:09.959 -03 [7233] LOG:  database system is shut down
+2022-05-31 14:03:33.650 -03 [7372] LOG:  starting PostgreSQL 14.3 on x86_64-pc-linux-gnu, compiled by gcc (Debian 6.3.0-18+deb9u1) 6.3.0 20170516, 64-bit
+2022-05-31 14:03:33.652 -03 [7372] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-05-31 14:03:33.664 -03 [7372] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-05-31 14:03:33.919 -03 [7373] LOG:  database system was shut down at 2022-05-31 14:02:34 -03
+2022-05-31 14:03:33.956 -03 [7372] LOG:  database system is ready to accept connections
+2022-05-31 14:03:44.071 -03 [7374] WARNING:  could not flush dirty data: Function not implemented
+2022-05-31 14:04:44.048 -03 [7506] WARNING:  could not flush dirty data: Function not implemented
+2022-05-31 14:32:47.802 -03 [8073] FATAL:  database "MovieHate" does not exist
+2022-05-31 14:47:25.466 -03 [9115] LOG:  starting PostgreSQL 14.3 on x86_64-pc-linux-gnu, compiled by gcc (Debian 6.3.0-18+deb9u1) 6.3.0 20170516, 64-bit
+2022-05-31 14:47:25.467 -03 [9115] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-05-31 14:47:25.478 -03 [9115] FATAL:  lock file "/tmp/.s.PGSQL.5432.lock" already exists
+2022-05-31 14:47:25.478 -03 [9115] HINT:  Is another postmaster (PID 7372) using socket file "/tmp/.s.PGSQL.5432"?
+2022-05-31 14:47:25.483 -03 [9115] LOG:  database system is shut down
+2022-05-31 15:00:32.995 -03 [7372] LOG:  received smart shutdown request
+2022-05-31 15:25:36.931 -03 [7378] LOG:  could not open temporary statistics file "pg_stat_tmp/global.tmp": No such file or directory
+2022-05-31 15:25:37.029 -03 [7372] LOG:  could not open file "postmaster.pid": No such file or directory
+2022-05-31 15:25:37.029 -03 [7372] LOG:  performing immediate shutdown because data directory lock file is invalid
+2022-05-31 15:25:37.029 -03 [7372] LOG:  received immediate shutdown request
+2022-05-31 15:25:37.030 -03 [7372] LOG:  could not open file "postmaster.pid": No such file or directory
+2022-05-31 15:25:37.031 -03 [7378] LOG:  could not open temporary statistics file "pg_stat/global.tmp": No such file or directory
+2022-05-31 15:25:37.058 -03 [7372] LOG:  database system is shut down
