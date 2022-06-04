@@ -1,0 +1,21 @@
+import './navbar.style.scss';
+import { FiGithub } from 'react-icons/fi';
+
+function Navbar() {
+  return (
+    <nav className="navbar navbar-dark bg-primary">
+      <div className='container-fluid'>
+        <a href='#' className='navbar-brand fw-bolder ms-lg-5'>MovieHate</a>  
+        <ul className='navbar-nav'>
+          <li className='nav-item'>
+            <a href='#' className='nav-link my-auto'>
+              <FiGithub className='fs-3 fw-light'/>
+              <span className='me-2 ms-1 me-lg-5'>@gdiasb</span>
+            </a></li>
+        </ul>
+      </div>
+    </nav>
+  );
+}
+
+export default Navbar;
