@@ -43,7 +43,6 @@ function Home() {
   const [page, setPage] = useState(0);
 
   function handleClick(pageNumber : number) {
-    console.log('pagenumber', pageNumber)
     setPage(pageNumber);
   }
 
@@ -55,7 +54,6 @@ function Home() {
     setPage(page+1)
   }
 
-  console.log(page)
 
   useEffect(() => {
     axios
@@ -65,7 +63,7 @@ function Home() {
       });
     }, [page])
     
-
+console.log(data.content)
   return (
     <div className="container row gy-4 mx-auto mt-5">
       {data.content.map(

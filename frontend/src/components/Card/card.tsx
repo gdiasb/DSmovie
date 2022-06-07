@@ -1,3 +1,5 @@
+import './card.css'
+
 interface Props {
   id?: number;
   image: string;
