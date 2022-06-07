@@ -59,7 +59,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get(`${BASE_URL}?size=6&page=${page}`)
+      .get(`${BASE_URL}?size=8&page=${page}&sort=title`)
       .then((response) => {
         setData(response.data);
       });
