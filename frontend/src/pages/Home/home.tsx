@@ -1,41 +1,78 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Card from "../../components/Card/card";
+import Navigation from "../../components/Navigation/Navigation";
 import { BASE_URL } from "../../data/requests";
 
 
 interface Props {
-  id?: number;
+  id: number;
   image: string;
   title: string;
-  count?: number;
-  score?: number;
-  children?: React.ReactNode;
+  count: number;
+  score: number;
+  children: React.ReactNode;
+}
+
+interface dataProps {
+  content: Props[];
+  last: boolean;
+  totalPages: number;
+  totalElements: number;
+  size: number;
+  number: number;
+  first: boolean;
+  numberOfElements: number;
+  empty: boolean;
 }
 
 function Home() {
 
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<dataProps>({
+    content: [],
+    last: true,
+    totalPages: 0,
+    totalElements: 0,
+    size: 12,
+    number: 0,
+    first: true,
+    numberOfElements: 0,
+    empty: true,
+  });
+
   const [page, setPage] = useState(0);
 
-  useEffect(() => {
-    axios.get(`${BASE_URL}?size=12`)
-      .then(response => {
-        setData(response.data.content);
+  function handleClick(pageNumber : number) {
+    console.log('pagenumber', pageNumber)
+    setPage(pageNumber);
+  }
 
-        setPage(response.data.totalPages);
-      })
-    }, [])
+  function handleClickPrevious() {
+    setPage(page-1)
+  }
+
+  function handleClickFoward() {
+    setPage(page+1)
+  }
+
+  console.log(page)
+
+  useEffect(() => {
+    axios
+      .get(`${BASE_URL}?size=6&page=${page}`)
+      .then((response) => {
+        setData(response.data);
+      });
+    }, [page])
     
-    console.log(page);
 
   return (
     <div className="container row gy-4 mx-auto mt-5">
-      {data.map(
+      {data.content.map(
         ({ count, id, title, image, score }: Props) => {
           return (
             <div
-              className="col-sm-6 col-md-4 col-lg-3 text-center mx-auto"
+              className="col-sm-6 col-md-4 col-lg-3 text-center"
               key={id}>
               <Card image={image} title={title}>
                 {count}
@@ -45,23 +82,13 @@ function Home() {
         },
       )}
 
-      <nav aria-label="Page navigation">
-        <ul className="pagination">
-          <li className="page-item">
-            <a
-              className="page-link"
-              href="#"
-              aria-label="Previous">
-              <span aria-hidden="true">&laquo;</span>
-            </a>
-          </li>
-          <li className="page-item">
-            <a className="page-link" href="#" aria-label="Next">
-              <span aria-hidden="true">&raquo;</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+      <Navigation
+        page={page}
+        totalPages={data.totalPages}
+        handleClickPrevious={handleClickPrevious}
+        handleClick={handleClick}
+        handleClickFoward={handleClickFoward}
+      />
     </div>
   );
 }
