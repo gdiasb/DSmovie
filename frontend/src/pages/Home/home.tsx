@@ -63,7 +63,7 @@ function Home() {
       });
     }, [page])
     
-console.log(data.content)
+  
   return (
     <div className="container row gy-4 mx-auto mt-5">
       {data.content.map(
