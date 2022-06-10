@@ -14,8 +14,7 @@ function Navbar() {
         <ul className="navbar-nav">
           <li className="nav-item">
             <a href="#" className="nav-link my-auto">
-
-              <i className="bi bi-github"></i>
+              <i className="fa-brands fa-github-alt fa-2xl"></i>
               <span className="me-2 ms-1 me-lg-5">
                 @gdiasb
               </span>
