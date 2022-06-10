@@ -1,7 +1,8 @@
+import { Link } from 'react-router-dom';
 import './card.css'
 
 interface Props {
-  id?: number;
+  id: number;
   image: string;
   title: string;
   count?: number;
@@ -20,9 +21,9 @@ function Card(props:Props) {
           <p className="card-text">{props.children}</p>
         </div>
         <div className="card-footer border-0">
-          <a href="#" className="btn btn-secondary">
+          <Link to={`/rate/${props.id}`} className="btn btn-secondary">
             Rate!
-          </a>
+          </Link>
         </div>
       </div>
   );

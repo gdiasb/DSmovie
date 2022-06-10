@@ -1,5 +1,4 @@
 import './navbar.style.scss';
-import { FiGithub } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
@@ -15,7 +14,8 @@ function Navbar() {
         <ul className="navbar-nav">
           <li className="nav-item">
             <a href="#" className="nav-link my-auto">
-              <FiGithub className="fs-3 fw-light" />
+
+              <i className="bi bi-github"></i>
               <span className="me-2 ms-1 me-lg-5">
                 @gdiasb
               </span>

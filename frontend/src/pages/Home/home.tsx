@@ -72,8 +72,8 @@ function Home() {
             <div
               className="col-sm-6 col-md-4 col-lg-3 text-center"
               key={id}>
-              <Card image={image} title={title}>
-                {count}
+              <Card id={id} image={image} title={title}>
+                <p>Score {score} from {count} votes</p>
               </Card>
             </div>
           );
