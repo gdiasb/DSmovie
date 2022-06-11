@@ -29,17 +29,31 @@ function Rate() {
 
   
   return (
-    <div className="d-flex gap-4 vh-100 justify-content-center align-items-center ms-5 me-5">
+    // <div className="d-flex gap-4 vh-100 justify-content-center align-items-center ms-5 me-5 row">
 
-        <div className="col-sm-5 col-lg-4 m-0 p-0 rounded-start bg-warning">
+    //     <div className="col-sm-5 col-lg-4 m-0 p-0 rounded-start bg-warning">
+    //       <img
+    //         src={movie.image}
+    //         className="img-fluid rounded-start"
+    //       />
+    //   </div>
+
+    //     <Form title={movie.title} />
+
+    // </div>
+
+    <div className="container-fluid  mt-sm-5 py-5 px-5">
+      <div className="row justify-content-center align-items-center">
+        <div className="col-8 col-sm-8 col-md-8 col-lg-5">
           <img
             src={movie.image}
-            className="img-fluid rounded-start"
+            className="img-fluid rounded w-100"
           />
+        </div>
+        <div className="col-8 col-sm-8 col-md-8 col-lg-5 pt-3 pt-lg-5 pe-lg-5">
+          <Form title={movie.title} />
+        </div>
       </div>
-      
-        <Form title={movie.title} />
-
     </div>
   );
 }

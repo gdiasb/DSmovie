@@ -2,15 +2,15 @@ import Stars from "../StarsRow/stars";
 
 function Form({title}:{title: string}) {
   return (
-    <form className="col-lg-4 me-5 ">
-      <h1 className="mb-4">{title}</h1>
+    <form>
+      <h2 className="mb-4">{title}</h2>
       <div className="mb-3">
         <label htmlFor="inputEmail" className="form-label">
           Email address
         </label>
         <input
           type="email"
-          className="form-control"
+          className="form-control ps-5"
           id="inputEmail"
           aria-describedby="emailHelp"
         />

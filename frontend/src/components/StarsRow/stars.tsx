@@ -1,18 +1,8 @@
 import './stars.style.scss';
 
 function Stars() {
-  const countStars: number = 5;
-
 
   return (
-    // <div className="d-flex gap-1 mt-3 align-items-center justify-content-center">
-    //   <IconContext.Provider
-    //     value={{ className: 'star-size' }}>
-    //     {[...Array(countStars).keys()].map((index) => {
-    //       return <BsStar key={index} />;
-    //     })}
-    //   </IconContext.Provider>
-    // </div>
 
     <div className="d-flex gap-1 mt-3 align-items-center justify-content-center">
       <fieldset className="stars-rating">
