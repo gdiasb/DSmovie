@@ -20,7 +20,7 @@ function Rate() {
   
   useEffect(() => {
   axios
-    .get(`${BASE_URL}/${movieId.movieId}`)
+    .get(`${BASE_URL}/movies/${movieId.movieId}`)
     .then((response) => {
       setMovie(response.data);
     });
@@ -51,7 +51,7 @@ function Rate() {
           />
         </div>
         <div className="col-8 col-sm-8 col-md-8 col-lg-5 pt-3 pt-lg-5 pe-lg-5">
-          <Form title={movie.title} />
+          <Form title={movie.title} id={movie.id} />
         </div>
       </div>
     </div>

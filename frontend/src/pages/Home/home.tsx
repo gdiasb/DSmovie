@@ -59,7 +59,7 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get(`${BASE_URL}?size=8&page=${page}&sort=title`)
+      .get(`${BASE_URL}/movies?size=8&page=${page}&sort=title`)
       .then((response) => {
         setData(response.data);
       });
@@ -76,7 +76,10 @@ function Home() {
               key={id}>
               <Card id={id} image={image} title={title}>
                 <Score score={score} />
-                <p>Score {score} from {count} votes</p>
+                <p className="fw-bold">{score.toFixed(1)}</p>
+                <p className="fw-light fst-italic fs-6 text">
+                  {count} Votes
+                </p>
               </Card>
             </div>
           );
