@@ -24,7 +24,7 @@ function Rate() {
     .then((response) => {
       setMovie(response.data);
     });
-    }, [])
+    }, [movieId])
 
 
   

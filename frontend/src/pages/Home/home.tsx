@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Card from "../../components/Card/card";
 import Navigation from "../../components/Navigation/Navigation";
+import Score from "../../components/Score/score";
+import Stars from "../../components/StarsRow/stars";
 import { BASE_URL } from "../../data/requests";
 
 
@@ -73,6 +75,7 @@ function Home() {
               className="col-sm-6 col-md-4 col-lg-3 text-center"
               key={id}>
               <Card id={id} image={image} title={title}>
+                <Score score={score} />
                 <p>Score {score} from {count} votes</p>
               </Card>
             </div>
