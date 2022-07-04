@@ -1,0 +1,35 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+.stars-rating > input {
+  display: none;
+}
+
+.stars-rating > label {
+  color: lightgray;
+  float: right;
+}
+
+.stars-rating > label:before {
+  // display: inline-block;
+  font-family: FontAwesome;
+  font-size: xx-large;
+  content: "\f005";
+}
+
+.stars-rating > .half-star::before {
+  position: absolute;
+  content: "\f089";
+}
+
+
+.stars-rating > input:checked ~ label,
+.stars-rating:not(:checked) > label:hover,
+.stars-rating:not(:checked) > label:hover ~ label {
+  color: #FFD700;
+}
+
+.stars-rating > input:checked + label:hover, 
+.stars-rating > label:hover ~ input:checked ~ label,
+.stars-rating > input:checked ~label:hover ~ label {
+  color: #FFED85;
+}
