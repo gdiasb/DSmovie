@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import Card from "../../components/Card/card";
 import Navigation from "../../components/Navigation/Navigation";
 import Score from "../../components/Score/score";
-import Stars from "../../components/StarsRow/stars";
 import { BASE_URL } from "../../data/requests";
 
 
